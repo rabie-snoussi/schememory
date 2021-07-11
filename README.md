@@ -10,6 +10,7 @@ When you flip unmatching cards your score drops by 100, however when you find th
 
 Example:
 
+```
 Matching cards      Score       AddedScore
                         0
 No                   -100             -100
@@ -20,6 +21,7 @@ No                      0             -100
 Yes                   100             +100
 Yes                   300             +200
 Yes                   700             +400
+```
 
 This scoring system was chosen to forgive mistakes and to encourage the player to be more engaged in order to get the best results instead of choosing cards randomly.
 
