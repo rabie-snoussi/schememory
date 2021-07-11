@@ -1,0 +1,135 @@
+.card {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  position: relative;
+  background-color: #b4b9d1;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  width: 630px;
+  margin-bottom: 5px;
+  background-color: black;
+  display: flex;
+  color: white;
+  font-size: 12px;
+  font-family: monospace;
+  border-radius: 10px;
+}
+
+.new-game {
+  color: white;
+  background-color: #545454;
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+
+.new-game:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.front-face,
+.back-face {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.back-face {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.back-face:hover {
+  opacity: 1;
+  transition: 0.5s;
+  border: 1px solid white;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.game {
+  width: 650px;
+  height: 650px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: #2b2b2b;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.score {
+  display: flex;
+}
+
+.score-text,
+.current-score,
+.added-score {
+  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#addedScore-placeholder {
+  visibility: hidden;
+}
+
+.fade-out {
+  animation: fadeOut ease-in 1s;
+}
+
+@keyframes fadeOut {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .topbar {
+    width: 100%;
+  }
+
+  .game {
+    width: 440px;
+    height: 440px;
+  }
+
+  .card,
+  .front-face,
+  .back-face {
+    width: 100px;
+    height: 100px;
+  }
+}
